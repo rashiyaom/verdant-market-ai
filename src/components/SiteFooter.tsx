@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Leaf } from "lucide-react";
+import { Zap } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -8,35 +8,34 @@ export function SiteFooter() {
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">
             <span className="grid size-8 place-items-center rounded-lg bg-ink text-lime">
-              <Leaf className="size-4" />
+              <Zap className="size-4 fill-current" />
             </span>
-            <span className="font-semibold">Farmora</span>
+            <span className="font-semibold">VOLTRA</span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-            A calm, modern home for growers — a live marketplace for fresh produce and an AI
-            companion that spots crop disease from a single photo.
+            Predictive power-grid intelligence that sees outage risk before customers lose power.
           </p>
         </div>
         <div>
           <p className="text-xs uppercase tracking-widest text-muted-foreground">Platform</p>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><Link to="/market" className="hover:underline">Live market</Link></li>
-            <li><Link to="/scan" className="hover:underline">AI crop scan</Link></li>
-            <li><Link to="/about" className="hover:underline">About</Link></li>
+            <li><Link to="/market" className="hover:underline">Live Grid</Link></li>
+            <li><Link to="/scan" className="hover:underline">Prediction</Link></li>
+            <li><Link to="/about" className="hover:underline">Technology</Link></li>
           </ul>
         </div>
         <div>
           <p className="text-xs uppercase tracking-widest text-muted-foreground">Contact</p>
           <ul className="mt-4 space-y-2 text-sm">
-            <li>hello@farmora.farm</li>
-            <li>Growers Guild, EU</li>
+            <li>grid@voltra.energy</li>
+            <li>Built for grid operators</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-border/60">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5 text-xs text-muted-foreground">
-          <span>© {new Date().getFullYear()} Farmora Cooperative</span>
-          <span>Grown with care.</span>
+          <span>© {new Date().getFullYear()} VOLTRA Systems</span>
+          <span>Predict before failure.</span>
         </div>
       </div>
     </footer>
