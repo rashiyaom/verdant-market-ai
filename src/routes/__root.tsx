@@ -20,7 +20,7 @@ function NotFoundComponent() {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <p className="mt-4 text-muted-foreground">This field is untilled.</p>
+        <p className="mt-4 text-muted-foreground">This grid segment is offline.</p>
         <div className="mt-6">
           <Link to="/" className="pill inline-flex items-center bg-ink px-5 py-2.5 text-sm text-cream">
             Back home
@@ -40,7 +40,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold">Something broke in the field</h1>
+        <h1 className="text-xl font-semibold">The signal was interrupted</h1>
         <p className="mt-2 text-sm text-muted-foreground">Try again or head back home.</p>
         <div className="mt-6 flex justify-center gap-2">
           <button
@@ -61,11 +61,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Farmora — Fresh Growth for Modern Agriculture" },
-      { name: "description", content: "A live farmer marketplace and AI crop disease scanner. Buy and sell fresh produce, and diagnose plant issues from a single leaf photo." },
-      { name: "author", content: "Farmora" },
-      { property: "og:title", content: "Farmora — Fresh Growth for Modern Agriculture" },
-      { property: "og:description", content: "Live marketplace for farm produce and AI-powered crop disease detection." },
+      { title: "VOLTRA — Predictive Grid Intelligence" },
+      { name: "description", content: "VOLTRA analyzes grid behavior to forecast electricity outages before they happen." },
+      { name: "author", content: "VOLTRA" },
+      { property: "og:title", content: "VOLTRA — Predictive Grid Intelligence" },
+      { property: "og:description", content: "See outage risk before the lights go out." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
