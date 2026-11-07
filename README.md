@@ -1,32 +1,47 @@
-# Agro Bloom
+# Farmora — Crop Health & Farm Market
 
-i want to make a farmer website that shoudl have the abitility 
+An interface prototype for two farmer workflows: browsing produce listings and checking a crop photo for possible leaf disease. I built this project to explore a calm, practical market experience alongside an AI-assisted crop scan.
 
-1. Live market of the farmer products where they can sell buy products
-2. Ai crope detection if the leaf has any disease or anything the ai shoudl be able to scan in images and then rell which dssease the crop has
+## Screens
 
+![Farmora produce marketplace](screenshots/farmora-market.png)
 
-make super good UI and it shoudl be like the image only no login page as of now focus on making hte UI as good as possible it shoudl have all the vuttons and the entire flow compeletely working : focus on making the uI super polished : make use of glass morphism and also use premium accents which makes the website look just like the image given it shoudl be super polsihed and premium and minimal looking : Now also on the home page : the landing page especially shoudl be super sleek looking and the rest of the pages shoudl also folow the accenture as shoudl match the UI 
+*Marketplace with seeded listings, category filters and buy/sell controls.*
 
-tkae the photos i gave you as the insputariotn to make th UI of the website
+![Farmora crop scan](screenshots/farmora-crop-scan.png)
 
-This project was built with [Lovable](https://lovable.dev).
+*Crop photo upload and diagnosis screen.*
 
-## Build with Lovable
+## What’s here
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/85c69d53-107a-443c-9588-8006e211c84b).
+- **Produce marketplace** at **/market**: search listings, filter by produce type and transaction, and try a sample listing flow.
+- **Crop scan** at **/scan**: upload a leaf image or use the included sample, add an optional crop hint, and request a diagnosis with symptoms, severity, treatment and prevention.
+- **About page** at **/about**: product concept and workflow notes.
+- Responsive layouts, reusable interface components and sample market data.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+The crop scan calls a server-side vision service. Configure the private model gateway key expected by the source file **src/lib/ai-gateway.server.ts** before using the scan; never commit that key.
 
-## Development
+## Tech
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+- React and TypeScript
+- TanStack Start and TanStack Router
+- Vite, Tailwind CSS and shadcn-style components
+- Recharts and Lucide icons
+- Server functions for image analysis
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+## Run locally
+
+~~~sh
+bun install
+bun run dev
+~~~
+
+Open the local URL printed by Vite. To use crop diagnosis, configure the server-side model gateway key in your local environment first.
+
+## Prototype notes
+
+Listings are seeded demo data and the market interactions are not connected to a real buying or selling service. AI crop results are model-generated suggestions, not verified agronomic advice. The repository currently contains two prototype surfaces: the root route is a predictive electricity-grid concept called VOLTRA; the farmer marketplace and crop scan are the Farmora routes at **/market** and **/scan**.
+
+## Author
+
+Built by [Om Rashiya](https://github.com/rashiyaom).
